@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GRAPH_MATRIX
+comment0.text=\r\n\ Klasse\ GRAPH_MATRIX\r\n\ Klasse\ f\u00FCr\ einen\ ungerichteten,\ gewichteten\ Graphen\r\n\ Als\ Datenstruktur\ wird\ eine\ Adjazenzmatrix\ verwendet\r\n\ \r\n
+comment1.params=maximaleKnoten
+comment1.target=GRAPH_MATRIX(int)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ GRAPH_MATRIX\r\n\ Die\ maximale\ Anzahl\ der\ Knoten\ wird\ dabei\ festgelegt\r\n\ \ \ \ \ \ \r\n\ @param\ \ \ maximaleKnoten\ \ \ Anzahl\ der\ maximal\ m\u00F6glichen\ Knoten\r\n\ \r\n
+numComments=2
