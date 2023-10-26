@@ -30,4 +30,43 @@ public class GRAPH_MATRIX
         matrix = new int[maximaleKnoten][maximaleKnoten];
     }
 
+    public void Ausgeben()
+    {
+        //Kopfzeile
+        System.out.printf("%-8s" , "");
+        for (int i = 0; i < anzahlKnoten; i++) {
+            System.out.printf("%-8s" , knoten[i].BezeichnungGeben());
+        }
+        System.out.println();
+
+        //Matrix mit linkem Rand
+        for (int i = 0; i < anzahlKnoten; i++) {
+            System.out.printf("%-8s" , knoten[i].BezeichnungGeben());
+            for (int j = 0; j < anzahlKnoten; j++) {
+                if (matrix[i][j] != -1)
+                {
+                    System.out.printf("%-8s" , matrix[i][j]);
+                }
+                else
+                {
+                    System.out.printf("%-8s" , "");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public int KnotenNummer(String bezeichner);
+    {
+        for (int i = 0; i < anzahlKnoten; i++) {
+            if (matrix[i] == bezeichner)
+            {
+
+            }
+        }
+
+        return;
+    }
+
+
 }
