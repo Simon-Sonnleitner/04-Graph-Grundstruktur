@@ -56,16 +56,18 @@ public class GRAPH_MATRIX
         }
     }
 
-    public int KnotenNummer(String bezeichner);
+    public int KnotenNummer ( String bezeichner)
     {
-        for (int i = 0; i < anzahlKnoten; i++) {
-            if (matrix[i] == bezeichner)
+        int ergeb = -1;
+        for (int i = 0; i < anzahlKnoten; i++)
+        {
+            if (knoten[i].BezeichnungGeben() == bezeichner)
             {
-
+                ergeb = i;
             }
         }
 
-        return;
+        return ergeb;
     }
 
 

@@ -6,7 +6,7 @@
 
 public class KNOTEN
 {
-    private String bezeichnung;
+    private final String bezeichnung;
 
 
     /**
