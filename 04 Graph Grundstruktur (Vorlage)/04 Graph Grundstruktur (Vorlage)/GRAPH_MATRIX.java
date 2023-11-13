@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * Klasse GRAPH_MATRIX
  * Klasse für einen ungerichteten, gewichteten Graphen
@@ -61,7 +63,7 @@ public class GRAPH_MATRIX
         int ergeb = -1;
         for (int i = 0; i < anzahlKnoten; i++)
         {
-            if (knoten[i].BezeichnungGeben() == bezeichner)
+            if (Objects.equals(knoten[i].BezeichnungGeben(), bezeichner))
             {
                 ergeb = i;
             }
@@ -69,6 +71,5 @@ public class GRAPH_MATRIX
 
         return ergeb;
     }
-
 
 }
