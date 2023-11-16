@@ -58,7 +58,7 @@ public class GRAPH_MATRIX
         }
     }
 
-    public int KnotenNummer ( String bezeichner)
+    public int KnotenNummer (String bezeichner)
     {
         int ergeb = -1;
         for (int i = 0; i < anzahlKnoten; i++)
@@ -70,6 +70,28 @@ public class GRAPH_MATRIX
         }
 
         return ergeb;
+    }
+
+    public void KnotenEinfuegen(String bezeichner)
+    {
+        if(anzahlKnoten < knoten.length && KnotenNummer(bezeichner) == -1)
+        {
+            knoten[anzahlKnoten] = new KNOTEN(bezeichner);
+            matrix[anzahlKnoten][anzahlKnoten] = 0;
+
+            for (int i = 0; i < anzahlKnoten; i++)
+            {
+                matrix[anzahlKnoten][i] = -1;
+                matrix[i][anzahlKnoten] = -1;
+            }
+            anzahlKnoten++;
+        }
+        else
+        {
+            System.out.println("Fehler in KnotenEinfuegen!");
+            System.out.println("Liegt wahrscheinlich daran, dass kein Platz mehr im Array ist, oder der Bezeichner schon existiert.");
+        }
+
     }
 
 }
