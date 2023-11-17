@@ -51,11 +51,12 @@ public class GRAPH_MATRIX
                 }
                 else
                 {
-                    System.out.printf("%-8s" , "");
+                    System.out.printf("%-8s" , "-1");
                 }
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     public int KnotenNummer (String bezeichner)
@@ -90,8 +91,42 @@ public class GRAPH_MATRIX
         {
             System.out.println("Fehler in KnotenEinfuegen!");
             System.out.println("Liegt wahrscheinlich daran, dass kein Platz mehr im Array ist, oder der Bezeichner schon existiert.");
+            System.out.println();
         }
 
     }
 
+    public void KanteEinfuegen(String von, String nach, int gewichtung)
+    {
+        int vonNummer = KnotenNummer(von);
+        int nachNummer= KnotenNummer(nach);
+        if (vonNummer != -1 && nachNummer != -1 && vonNummer != nachNummer)
+        {
+            matrix[vonNummer][nachNummer] = gewichtung;
+            matrix[nachNummer][vonNummer] = gewichtung;
+        }
+    }
+
+    public void KanteLoeschen(String von, String nach)
+    {
+        int vonNummer = KnotenNummer(von);
+        int nachNummer= KnotenNummer(nach);
+        if (vonNummer != -1 && nachNummer != -1 && vonNummer != nachNummer)
+        {
+            matrix[vonNummer][nachNummer] = -1;
+            matrix[nachNummer][vonNummer] = -1;
+        }
+    }
+
+    public String KnotenBezeichnerGeben(int knotennummer)
+    {
+        if(knotennummer > anzahlKnoten)
+        {
+            System.out.println("Unter dieser Knotennummer ist kein Knoten vorhanden");
+            return null;
+        }
+        System.out.println("Der Knoten hat den Bezeichner " + knoten[knotennummer].BezeichnungGeben());
+        System.out.println();
+        return knoten[knotennummer].BezeichnungGeben();
+    }
 }
