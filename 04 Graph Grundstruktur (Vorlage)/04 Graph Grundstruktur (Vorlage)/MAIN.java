@@ -9,5 +9,6 @@ public class MAIN {
         graph_matrix.KanteEinfuegen("A","A",50);
         graph_matrix.Ausgeben();
         graph_matrix.KnotenBezeichnerGeben(1);
+        graph_matrix.KanteGewichtGeben("A", "B");
     }
 }

@@ -129,4 +129,27 @@ public class GRAPH_MATRIX
         System.out.println();
         return knoten[knotennummer].BezeichnungGeben();
     }
+
+    public int KanteGewichtGeben( String von, String nach)
+    {
+        int vonNummer = KnotenNummer(von);
+        int nachNummer= KnotenNummer(nach);
+        int gewichtung = 0;
+        if (vonNummer != -1 && nachNummer != -1 && vonNummer != nachNummer)
+        {
+            gewichtung = matrix[vonNummer][nachNummer];
+            System.out.println("Das Gewicht der Kanten " + von + " nach " + nach + " ist: " + gewichtung);
+        }
+        else
+        {
+            System.out.println("Fehler bei KanteGewichtGeben");
+        }
+        return gewichtung;
+    }
+
+    public int KnotenAnzahl()
+    {
+        System.out.println("Es gibt "+ this.anzahlKnoten + " Knoten");
+        return this.anzahlKnoten;
+    }
 }
